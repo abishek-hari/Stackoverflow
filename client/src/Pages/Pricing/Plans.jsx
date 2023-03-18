@@ -33,8 +33,8 @@ const Plans = () => {
       order_id: data.id,
       handler: async (response) => {
         try {
-          // const verifyUrl = "http://localhost:5000/api/payment/verify";
-          const verifyUrl = "https://stackoverflow-5hye.onrender.com";
+          const verifyUrl =
+            "https://stackoverflow-5hye.onrender.com/api/payment/verify";
           const { data } = await axios.post(verifyUrl, response);
           console.log(data);
         } catch (error) {
@@ -52,8 +52,8 @@ const Plans = () => {
   const handlePayment = async (selectedPlanId) => {
     try {
       const selectedPlan = plan.find((plan) => plan.id === selectedPlanId);
-      // const orderUrl = "http://localhost:5000/api/payment/orders";
-      const orderUrl = "https://stackoverflow-5hye.onrender.com";
+      const orderUrl =
+        "https://stackoverflow-5hye.onrender.com/api/payment/orders";
       const { data } = await axios.post(orderUrl, {
         amount: selectedPlan.price,
       });
