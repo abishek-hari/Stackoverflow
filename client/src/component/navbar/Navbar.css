@@ -24,6 +24,14 @@
   width: 10rem;
   object-fit: cover;
 }
+.icon {
+  width: 4.5rem;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  left: 45px;
+  display: none;
+}
 .search {
   width: 1.2rem;
   object-fit: cover;
@@ -52,7 +60,7 @@
   position: relative;
 }
 .navbar form input {
-  min-width: 90%;
+  min-width: 85%;
   height: 0.8rem;
   margin: 0;
   padding: 8px 8px 10px 32px;
@@ -61,7 +69,6 @@
   border: 1px solid #b0b0b0;
   outline: none;
 }
-
 .navbar form .search {
   position: absolute;
   top: 5px;
@@ -77,4 +84,91 @@
 }
 .nav-links:hover {
   background-color: #ceecf7;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger menu */
+
+.navbar .menu-bars {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+  margin-left: 10px;
+  display: none;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+.nav-menu {
+  width: 230px;
+  height: 90vh;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  border: 1px solid rgb(200, 198, 198);
+  transition: 0.4s ease-in-out;
+  z-index: 1;
+}
+.nav-menu.show {
+  left: 0;
+}
+.nav-menu-div {
+  height: 90%;
+  width: 100%;
+}
+.close-bar {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #3a3a3a;
+}
+.nav-items {
+  margin-top: 50px;
+}
+.menu-links {
+  list-style-type: none;
+  text-decoration: none;
+}
+.side-nav-link {
+  text-decoration: none;
+  color: #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  transition: 0.2s;
+  padding: 1rem 0px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .nav-btn {
+    display: none;
+  }
+  .navbar form input {
+    min-width: 70%;
+  }
+}
+@media (max-width: 670px) {
+  .navbar form {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .navbar .menu-bars {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+  .icon {
+    display: block;
+  }
 }

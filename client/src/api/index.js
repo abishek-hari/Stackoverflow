@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:5000" });
+const API = axios.create({
+  baseURL: "https://stackoverflow-5hye.onrender.com",
+});
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
@@ -10,6 +12,25 @@ API.interceptors.request.use((req) => {
   }
   return req;
 });
+
+export const fetchResponse = async (chat) => {
+  try {
+    const response = await fetch("https://stackoverflow-5hye.onrender.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: chat.map((message) => message.message).join(" \n "),
+      }),
+    });
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const logIn = (authData) => API.post("/user/login/", authData);
 export const signUp = (authData) => API.post("/user/signup/", authData);

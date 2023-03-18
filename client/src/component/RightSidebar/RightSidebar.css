@@ -57,3 +57,17 @@
   font-size: 13px;
   margin: 10px 5px;
 }
+
+@media (max-width: 768px) {
+  .right-sidebar {
+    width: 100%;
+  }
+  .right-sidebar-div-2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .right-sidebar-div-2 p {
+    padding-left: 10px;
+  }
+}

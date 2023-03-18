@@ -8,6 +8,9 @@ import DisplayQuestion from "../src/Pages/Questions/DisplayQuestion";
 import Tags from "./Pages/Tags/Tags";
 import Users from "./Pages/Users/Users";
 import UserProfile from "./Pages/UserProfile/UserProfile";
+import Community from "./Pages/Community/Community";
+import Pricing from "./Pages/Pricing/Pricing";
+import UserChatbot from "./Pages/UserChatbot/UserChatbot";
 
 const AllRoutes = () => {
   return (
@@ -20,6 +23,9 @@ const AllRoutes = () => {
       <Route path='/Tags' element={<Tags />} />
       <Route path='/Users' element={<Users />} />
       <Route path='/Users/:id' element={<UserProfile />} />
+      <Route path='/Community' element={<Community />} />
+      <Route path='/Pricing' element={<Pricing />} />
+      <Route path='/UserChat' element={<UserChatbot />} />
     </Routes>
   );
 };

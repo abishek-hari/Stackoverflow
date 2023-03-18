@@ -3,6 +3,7 @@
   background-color: #f1f2f3;
 }
 .ask-ques-container {
+  max-width: 75rem;
   width: 1200px;
   margin: auto;
 }
@@ -44,4 +45,28 @@
 }
 .review-btn:hover {
   background-color: #0086d8;
+}
+
+@media (max-width: 768px) {
+  .ask-ques-container {
+    max-width: 35rem;
+    width: 650px;
+  }
+}
+@media (max-width: 450px) {
+  .ask-ques-container {
+    max-width: 20rem;
+    width: 420px;
+  }
+  .ask-ques-container h1 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 325px) {
+  .ask-ques-container {
+    max-width: 17rem;
+  }
+  .ask-ques-container h1 {
+    font-size: 1.5rem;
+  }
 }

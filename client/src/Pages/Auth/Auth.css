@@ -76,3 +76,19 @@
   font-size: 13px;
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .auth-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .auth-container-1 {
+    padding: 20px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  .auth-container-2 {
+    min-width: 16%;
+    margin: 8% 12%;
+  }
+}
