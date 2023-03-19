@@ -15,7 +15,7 @@ API.interceptors.request.use((req) => {
 
 export const fetchResponse = async (chat) => {
   try {
-    const response = await fetch("https://stackoverflow-5hye.onrender.com", {
+    const response = await fetch("http://localhost:5000", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
