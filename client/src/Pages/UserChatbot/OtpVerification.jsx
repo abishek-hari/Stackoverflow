@@ -134,3 +134,17 @@ const OtpVerification = () => {
 };
 
 export default OtpVerification;
+
+// import React from "react";
+// import Chat from "./Chat";
+// import "./Chat.css";
+
+// const OtpVerification = () => {
+//   return (
+//     <div className='chatbot-container'>
+//       <Chat />
+//     </div>
+//   );
+// };
+
+// export default OtpVerification;

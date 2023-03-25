@@ -13,20 +13,32 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
+// export const fetchResponse = async (chat) => {
+//   try {
+//     const response = await fetch("http://localhost:5000", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         message: chat.map((message) => message.message).join(" \n "),
+//       }),
+//     });
+
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
 export const fetchResponse = async (chat) => {
   try {
-    const response = await fetch("http://localhost:5000", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        message: chat.map((message) => message.message).join(" \n "),
-      }),
+    const response = await API.post("/api/chatbot", {
+      message: chat.map((message) => message.message).join(" \n "),
     });
 
-    const data = await response.json();
-    return data;
+    return response.data;
   } catch (error) {
     console.log(error);
   }
